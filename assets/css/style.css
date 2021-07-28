@@ -18,10 +18,10 @@ div {
     height: 400px;
 }
 .container {
-    /* center the box in the middle of the window */
+    /* center the box in the middle of the window (the classic way, without display: flex)*/
     margin: calc((100vh - 400px) / 2) auto;
 
-    /* add a little bit shadow (just for better looking) */
+    /* add a little bit shadow (just to look better) */
     box-shadow: 10px 10px 10px #00000066;
 
     /* no scrollbars, no visible overlay area */
@@ -32,6 +32,7 @@ div {
         center/cover no-repeat;
 }
 .overlay {
+    /* colors for the grey veil */
     background: #00000066;
     color: #ffffff99;
 
@@ -39,11 +40,11 @@ div {
     position: relative;
     top: 0px;
 
-    /* center the text (classic, no flex) */
+    /* center the text in the middle of the box (classic too, no display: flex) */
     text-align: center;
     padding-top: 188px;
 
-    /* use transition top to show everlay area */
+    /* use transition top to brin the overlay area on top */
     transition: top 1.5s ease;
 }
 .image:hover ~ .overlay {
